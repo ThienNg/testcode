@@ -1,0 +1,51 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1258">
+<title>test</title>
+</head>
+
+<body>
+	<button name='1' value="1" onclick="hieng(this.name,this.value)" id="nut1" >game 1</button>
+	<button name='2' value="1" onclick="hieng(this.name,this.value)" id="nut2" >game 2</button>
+	<button name='3' value="1" onclick="hieng(this.name,this.value)" id="nut3" >game 3</button>
+	<button name='4' value="1" onclick="hieng(this.name,this.value)" id="nut4" >game 4</button>
+	<script>
+		var x,y,n,m;
+		function tat(){
+			document.getElementById("nut1").value = 1;
+			document.getElementById("nut2").value = 1;
+			document.getElementById("nut3").value = 1;
+			document.getElementById("nut4").value = 1;
+			document.getElementById("abc").innerHTML = "";
+		}
+		function rutgon(y,n,m){
+			if(parseInt(y)==1){
+				tat();
+				document.getElementById("abc").innerHTML = n;
+				document.getElementById(m).value = 0;
+			}
+			else{
+				tat();
+			}
+		}
+		function hieng(x,y){
+			switch (parseInt(x)){
+				case 1:
+					rutgon(y,'<a href="baitap/blogging/bt.html">Bài T?p</a>',"nut1");
+					break;
+				case 2:
+					rutgon(y,"nutso2","nut2");
+				break;
+				case 3: 
+					rutgon(y,"nutso3","nut3");
+				break;
+				case 4:
+					rutgon(y,"nutso4","nut4");
+				break;
+				default:	
+					alert("k thay");
+				break;
+			}
+		}
+	</script>
+   <div id="abc"></div>  
+
+</body></html>
